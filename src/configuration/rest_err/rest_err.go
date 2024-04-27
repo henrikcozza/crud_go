@@ -90,3 +90,7 @@ func NewForbidenValidationError(message string, causes []Causes) *RestErr {
 		Causes:  causes,
 	}
 }
+
+func (r *RestErr) Error() string {
+	return r.Message
+}
